@@ -1,0 +1,23 @@
+Three key components need to be addressed:
+
+1. Interacting with a user's deck collection
+2. Performing useful dictionary lookups
+3. The browser-based frontend.
+
+Regarding 1:
+	- We can avoid dealing with authentication on behalf of the user by just
+	interacting with the local deck in python. This is probably the easiest
+	starting point.
+	- We could reverse engineer ankiweb.net
+	- We could investigate how the desktop client does this.
+
+Regarding 2:
+	- We can do langid of text and choose appropriate dictionaries. As a
+	  starting point, probably just worth focusing on getting one dictionary
+	  working.
+
+Regarding 3:
+	- The current idea for the workflow is: click or highlight a word, then a
+	  popup occurs with various definitions that have been fetched. The user
+	  chooses the relevant one and then adds a card. The context for the card
+	  is automatically determined.
